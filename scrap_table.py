@@ -28,6 +28,7 @@ def lambda_handler(event, context):
 
     # Extraer los encabezados de la tabla
     headers = [header.text for header in table.find_all('th')]
+    headers.pop()
 
     # Extraer las filas de la tabla
     rows = []
